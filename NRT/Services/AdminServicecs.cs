@@ -8,5 +8,8 @@ namespace NRT_Vending_Machine.NRT.Services
 {
     internal class AdminServicecs
     {
+
+
+
     }
 }
