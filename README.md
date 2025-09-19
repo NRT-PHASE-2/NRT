@@ -29,7 +29,7 @@ The <b>Admin</b> of the system must first add sprinters so they are able to logi
 </connectionStrings>
 ```
 
--Then you want to copy everything from the SeedData.txt file into a new SQL query. Execute it, and... you're ready to test!
+- Then you want to copy everything from the SeedData.txt file into a new SQL query. Execute it, and... you're ready to test!
 
 ⚠️ Requirements
 Visual Studio 2019 or later
