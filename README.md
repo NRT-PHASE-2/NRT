@@ -28,6 +28,9 @@ The <b>Admin</b> of the system must first add sprinters so they are able to logi
   <add name="NRTDb" connectionString="Data Source={SERVERNAME};Initial Catalog=NRTVending;Integrated Security=True;" providerName="System.Data.SqlClient" />
 </connectionStrings>
 ```
+
+-Then you want to copy everything from the SeedData.txt file into a new SQL query. Execute it, and... you're ready to test!
+
 ⚠️ Requirements
 Visual Studio 2019 or later
 .NET Framework 4.7.2
