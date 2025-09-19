@@ -1,0 +1,42 @@
+CREATE DATABASE NRTVending;
+GO
+USE NRTVending;
+GO
+
+CREATE TABLE Users (
+    Id INT IDENTITY PRIMARY KEY,
+    StudentId NVARCHAR(20) UNIQUE NOT NULL,
+    Name NVARCHAR(100) NOT NULL,
+    Password NVARCHAR(50) NOT NULL,
+    Balance FLOAT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE Admins (
+    Id INT IDENTITY PRIMARY KEY,
+    Username NVARCHAR(50) UNIQUE NOT NULL,
+    Password NVARCHAR(50) NOT NULL,
+    Balance FLOAT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE Items (
+    Id INT IDENTITY PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Type NVARCHAR(50) NOT NULL,
+    Price FLOAT NOT NULL,
+    Stock INT NOT NULL,
+    IsActive BIT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE VendingBalance (
+    Id INT IDENTITY PRIMARY KEY,
+    Balance FLOAT NOT NULL DEFAULT 0
+);
+
+INSERT INTO Admins (Username, Password, Balance) VALUES ('redAcademy','NRT#786',0);
+INSERT INTO VendingBalance (Balance) VALUES (0);
+INSERT INTO Items (Name, Type, Price, Stock) VALUES
+('Byte-Me!','Snack',15,10),
+('Syntax Soda','Drink',14,10),
+('iEngery++','Drink',10,20),
+('Site Cookies','Snack',12,15);
+ 
